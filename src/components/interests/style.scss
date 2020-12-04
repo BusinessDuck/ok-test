@@ -1,0 +1,120 @@
+@import "../../assets/scss/spinners";
+
+.interests {
+  min-height: 240px;
+  &__loading {
+    @include spinner(15px);
+    margin:60px auto;
+  }
+  &__block {
+    padding-left: 20px;
+    .controls {
+      &__input {
+        display: inline-block;
+        margin-right: 15px;
+        &--button {
+          visibility: hidden;
+        }
+        &--visible {
+          visibility: visible;
+        }
+      }
+    }
+  }
+  &__title {
+    font-size: 18px;
+    font-weight: 200;
+    border-bottom: 1px solid #999999;
+    padding-bottom: 3px;
+  }
+  &__subtitle {
+    margin-bottom: 14px;
+    > span {
+      font-size: 15px;
+    }
+    &:after {
+      border: 0.5px dotted #999999;
+      content: "";
+      display: inline-block;
+      position: relative;
+      width: 88%;
+      top: -3px;
+      left: 5px;
+      left: 5px;
+    }
+  }
+
+  &__list {
+    transition: height 2s;
+    padding-left: 0;
+    margin-bottom: 10px;
+    li.interests__list__item {
+      transition: all 0.2s ease-out;
+      opacity: 0;
+      list-style: none;
+      position: relative;
+      font-size: 13px;
+      margin-bottom: 13px;
+
+      &:hover {
+        cursor: pointer;
+        .icon.icon--remove {
+          display: inline;
+        }
+      }
+
+      &--show {
+        opacity: 1;
+      }
+      &--loading {
+        overflow: hidden;
+        &:hover {
+          cursor: default;
+          .icon.icon--remove {
+            display: none;
+          }
+        }
+        span {
+          display: block;
+          @include spinner(10px);
+          padding-bottom: 1px;
+          margin: 0 !important;
+        }
+      }
+     & > span {
+        color: #1c9c09;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+      .icon.icon--remove {
+        display: none;
+        position: absolute;
+        left: -18px;
+        top: 4px;
+      }
+    }
+  }
+
+  &__more {
+    position: relative;
+    top: -4px;
+    display: inline-block;
+    padding-bottom: 1px;
+    color: #EB722E;
+    font-size: 12px;
+    border-bottom: 0.5px dotted #EB722E;
+    &:hover {
+      cursor: pointer;
+      color: #DA3701;
+    }
+
+    &--loading {
+      overflow: hidden;
+      &:hover {
+        cursor: default;
+      }
+      @include spinner(10px);
+    }
+  }
+}

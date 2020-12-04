@@ -1,0 +1,47 @@
+.interests.interests--friend {
+  margin-top: 50px;
+  .interests__list {
+    li.interests__list__item {
+      &:hover {
+        & > .icon {
+          display: inline;
+        }
+
+        & > .interests__list__report {
+          visibility: visible;
+        }
+      }
+      & > .icon {
+        transition: opacity 1s;
+        display: none;
+        position: absolute;
+        left: -18px;
+        top: 4px;
+        &--add {
+          opacity: 0.7
+        }
+        &--ok {
+          display: inline;
+          opacity: 0.7;
+        }
+        &--fadeout {
+          opacity: 0;
+        }
+      }
+
+      & > .interests__list__report {
+        visibility: hidden;
+        position: absolute;
+        right: 0;
+        top: 0;
+        color: #656565;
+        .icon {
+          display: inline;
+          position: absolute;
+          left: -15px;
+          top: 1px;
+        }
+      }
+    }
+  }
+}

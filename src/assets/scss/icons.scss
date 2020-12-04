@@ -1,0 +1,34 @@
+.icon {
+  width: 10px;
+  height: 10px;
+  &--remove {
+    background: url("../images/close.png") no-repeat center;
+  }
+  &--add {
+    background: url("../images/add.png") no-repeat center;
+  }
+  &--ok {
+    background: url("../images/ok.png") no-repeat center;
+  }
+  &--report {
+    background: url("../images/warn.png") no-repeat center;
+  }
+}
+
+/*CSS for serving the retina image to devices with a high "device-pixel-ratio":*/
+@media only screen and (-webkit-min-device-pixel-ratio: 1.3),
+only screen and (-o-min-device-pixel-ratio: 13/10),
+only screen and (min-resolution: 120dpi) {
+  .icon {
+    background-size: 24px 24px;
+  }
+  .icon--remove {
+    background-image: url("../images/close@2x.png");
+  }
+  .icon--add {
+    background: url("../images/add@2x.png") no-repeat center;
+  }
+  .icon--ok {
+    background: url("../images/ok@2x.png") no-repeat center;
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "presets": [
+    "env",
+    "stage-0"
+  ],
+  "plugins": [
+    "transform-class-properties"
+  ]
+  //automatically determine the Babel plugins and polyfills you need based on your supported environments.
+}

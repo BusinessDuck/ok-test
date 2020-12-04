@@ -1,0 +1,51 @@
+$button_text: #000000;
+$button_gradient_start: #f0f0f0;
+$button_gradient_end: #d1d1d1;
+$button_gradient_end_hover: #e0e0e0;
+$button_shadow_out: #999399;
+$button_shadow_in: #999399;
+
+$input_border: #cccccc;
+$input_border_focus: #a6a6a6;
+$input_text_shadow: rgba(42, 42, 42, 0.6);
+$input_box_shadow: rgba(42, 42, 42, 0.24);
+
+input[type="text"], textarea {
+  min-width: 200px;
+  padding: 7px;
+  font-size: 14px;
+  border-radius: 3px;
+  border: 1px solid $input_border;
+  text-shadow: 0 0 0 $input_text_shadow;
+  box-shadow: inset 0 0 2px 0 $input_box_shadow;
+
+  &:focus {
+    border-color: $input_border_focus;
+  }
+}
+
+input[type="button"] {
+  background: $button_gradient_start linear-gradient(to bottom, $button_gradient_start, $button_gradient_end);
+  border-radius: 3px;
+  box-shadow: 0 1px 0 $button_shadow_out;
+  font-family: Arial, serif;
+  color: $button_text;
+  font-size: 14px;
+  padding: 7.5px 20px 7.5px 20px;
+  text-decoration: none;
+  border: none;
+
+  &:hover {
+    background: $button_gradient_start linear-gradient(to bottom, $button_gradient_start, $button_gradient_end_hover);
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  &:active {
+    box-shadow: inset 1px 1px 1px $button_shadow_in;
+  }
+}
+
+input:focus, textarea {
+  outline: none;
+}
